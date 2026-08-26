@@ -1,0 +1,22 @@
+    [package]
+    name = "flags-2-env-lib-core"
+    version = "0.1.0"
+    edition = "2021"
+    license = "MIT"
+    description = "SeaORM boundary for flags-2-env on PostgreSQL and CockroachDB"
+    repository = "https://github.com/flags-2-env/flags-2-env-lib-core"
+
+    [features]
+    default = ["read-only"]
+    read-only = []
+    read-write = ["read-only"]
+    migrate = ["read-write"]
+
+    [dependencies]
+    serde = { version = "1", features = ["derive"] }
+    thiserror = "2"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+
